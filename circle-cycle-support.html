@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circle Cycle – Support & Privacy</title>
+<meta name="description" content="Support and Privacy Policy for Circle Cycle, a retro arcade timing game for iOS and Android.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  /* ====== EDIT THESE ====== */
+  /* Contact e-mail is set in the CONFIG block at the bottom of the file. */
+
+  :root {
+    --bg: #0c0c20;
+    --panel: #17173a;
+    --panel-2: #1e1e48;
+    --line: #2d2d66;
+    --text: #e9e9ff;
+    --muted: #a7a7d6;
+    --yellow: #ffdc1e;
+    --cyan: #28e6ff;
+    --pink: #ff32aa;
+    --orange: #ffaa14;
+    --green: #46ff6e;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background:
+      radial-gradient(ellipse at 50% -10%, #3c1e6e 0%, transparent 60%),
+      linear-gradient(rgba(120,120,255,.05) 1px, transparent 1px) 0 0 / 32px 32px,
+      linear-gradient(90deg, rgba(120,120,255,.05) 1px, transparent 1px) 0 0 / 32px 32px,
+      var(--bg);
+    color: var(--text);
+    font: 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 48px 0 24px; text-align: center; }
+  .rings { width: 96px; height: 96px; margin: 0 auto 20px; display: block;
+           filter: drop-shadow(0 0 10px rgba(40,230,255,.5)); }
+  h1 {
+    font-family: "Press Start 2P", monospace;
+    font-size: clamp(26px, 6vw, 44px);
+    line-height: 1.25; margin: 0;
+    letter-spacing: 2px;
+  }
+  h1 .a { color: var(--yellow); text-shadow: 4px 4px 0 #783000, 0 0 18px rgba(255,220,30,.55); }
+  h1 .b { color: var(--cyan);   text-shadow: 4px 4px 0 #003270, 0 0 18px rgba(40,230,255,.55); }
+  .tag { color: var(--muted); margin: 14px 0 0; }
+
+  nav.top {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+    margin: 28px 0 8px;
+  }
+  .btn {
+    font-family: "Press Start 2P", monospace; font-size: 12px;
+    color: #19142a; background: var(--orange);
+    padding: 14px 18px; text-decoration: none; border: 3px solid #fff0c8;
+    box-shadow: 5px 5px 0 #140a00; display: inline-block; cursor: pointer;
+    transition: transform .08s ease, box-shadow .08s ease;
+  }
+  .btn:hover { transform: translate(2px,2px); box-shadow: 3px 3px 0 #140a00; }
+  .btn.alt { background: var(--cyan); border-color: #d6fbff; }
+  .lang { display: flex; justify-content: center; gap: 6px; margin-top: 18px; }
+  .lang button {
+    font: 600 13px Inter, sans-serif; color: var(--muted); background: transparent;
+    border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { color: var(--bg); background: var(--text); border-color: var(--text); }
+
+  section.card {
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    border: 3px solid var(--line);
+    box-shadow: 8px 8px 0 rgba(0,0,0,.45);
+    padding: 28px clamp(18px, 4vw, 40px);
+    margin: 32px 0;
+    scroll-margin-top: 16px;
+  }
+  h2 {
+    font-family: "Press Start 2P", monospace; font-size: clamp(16px, 3.4vw, 22px);
+    line-height: 1.4; margin: 0 0 6px; color: var(--green);
+    text-shadow: 3px 3px 0 #003c12;
+  }
+  #privacy h2 { color: var(--pink); text-shadow: 3px 3px 0 #4a0030; }
+  h3 { font-size: 17px; font-weight: 800; margin: 26px 0 6px; color: var(--yellow); }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  a { color: var(--cyan); }
+  .contact {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    background: rgba(0,0,0,.25); border: 2px dashed var(--line); padding: 18px 20px; margin: 18px 0 6px;
+  }
+  .contact strong { display: block; font-size: 15px; }
+  .contact span { color: var(--muted); font-size: 14px; }
+  details {
+    border-top: 1px solid var(--line); padding: 12px 0;
+  }
+  details:last-of-type { border-bottom: 1px solid var(--line); }
+  summary { cursor: pointer; font-weight: 600; list-style: none; position: relative; padding-right: 28px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+"; position: absolute; right: 4px; top: -2px;
+    font-family: "Press Start 2P", monospace; font-size: 14px; color: var(--orange);
+  }
+  details[open] summary::after { content: "–"; }
+  details p { margin: 8px 0 2px; color: var(--muted); }
+
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 8px 0 48px; }
+  footer .px { font-family: "Press Start 2P", monospace; font-size: 10px; color: var(--orange); }
+
+  [data-lang="tr"] .en, [data-lang="en"] .tr { display: none !important; }
+</style>
+</head>
+<body data-lang="en">
+<div class="wrap">
+
+  <header>
+    <svg class="rings" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#28e6ff" stroke-width="4"/>
+      <circle cx="50" cy="50" r="36" fill="none" stroke="#ffdc1e" stroke-width="4"/>
+      <circle cx="50" cy="50" r="26" fill="none" stroke="#ff32aa" stroke-width="4"/>
+      <circle cx="50" cy="50" r="12" fill="none" stroke="#46ff6e" stroke-width="4"/>
+    </svg>
+    <h1><span class="a">CIRCLE</span> <span class="b">CYCLE</span></h1>
+    <p class="tag">
+      <span class="en">A retro arcade timing challenge for iOS and Android.</span>
+      <span class="tr">iOS ve Android için retro arcade zamanlama oyunu.</span>
+    </p>
+    <nav class="top">
+      <a class="btn" href="#support"><span class="en">SUPPORT</span><span class="tr">DESTEK</span></a>
+      <a class="btn alt" href="#privacy"><span class="en">PRIVACY</span><span class="tr">GİZLİLİK</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set="en" aria-pressed="true">English</button>
+      <button type="button" data-set="tr" aria-pressed="false">Türkçe</button>
+    </div>
+  </header>
+
+  <!-- ================= SUPPORT ================= -->
+  <section class="card" id="support">
+    <h2><span class="en">SUPPORT</span><span class="tr">DESTEK</span></h2>
+
+    <div class="en">
+      <p>Need help, found a bug, or have an idea for Circle Cycle? We'd love to hear from you.</p>
+      <div class="contact">
+        <div><strong>Email us</strong><span>We usually reply within 2 business days.</span></div>
+        <a class="btn" data-mail href="#">CONTACT</a>
+      </div>
+      <p class="meta">When reporting a problem, please include your device model, operating system version (iOS or Android) and the app version (shown in the App Store or Google Play).</p>
+
+      <h3>How to play</h3>
+      <p>Circles expand on the screen. Tap at the right moment to stop each circle as close as possible to the target without overlapping the others. Stop all the circles in a level to clear the stage. The more precise your timing, the higher your score.</p>
+
+      <h3>Frequently asked questions</h3>
+      <details><summary>Does Circle Cycle need an internet connection?</summary>
+        <p>No. The game plays fully offline.</p></details>
+      <details><summary>Where are my top scores saved?</summary>
+        <p>Your top scores are stored only on your device. They are not uploaded anywhere.</p></details>
+      <details><summary>I deleted the app. Can I get my scores back?</summary>
+        <p>Because scores are saved locally, deleting the app also deletes them and they can't be restored.</p></details>
+      <details><summary>Taps feel delayed or the game stutters.</summary>
+        <p>Close other apps running in the background, turn off Low Power Mode (iOS) or Battery Saver (Android), and make sure you have the latest version of Circle Cycle and your operating system installed. If the issue continues, email us with your device model.</p></details>
+      <details><summary>How do I reset the game?</summary>
+        <p>Deleting and reinstalling the app resets all progress and scores.</p></details>
+    </div>
+
+    <div class="tr">
+      <p>Yardıma mı ihtiyacın var, bir hata mı buldun ya da Circle Cycle için bir fikrin mi var? Bize yaz.</p>
+      <div class="contact">
+        <div><strong>E-posta gönder</strong><span>Genellikle 2 iş günü içinde yanıt veriyoruz.</span></div>
+        <a class="btn" data-mail href="#">İLETİŞİM</a>
+      </div>
+      <p class="meta">Bir sorun bildirirken lütfen cihaz modelini, işletim sistemi sürümünü (iOS veya Android) ve uygulama sürümünü (App Store'da veya Google Play'de görünür) ekle.</p>
+
+      <h3>Nasıl oynanır?</h3>
+      <p>Ekranda halkalar büyür. Her halkayı diğerleriyle çakıştırmadan, hedefe olabildiğince yakın durdurmak için doğru anda dokun. Bir seviyedeki tüm halkaları durdurduğunda bölümü geçersin. Zamanlaman ne kadar hassassa puanın o kadar yüksek olur.</p>
+
+      <h3>Sık sorulan sorular</h3>
+      <details><summary>Circle Cycle internet bağlantısı gerektiriyor mu?</summary>
+        <p>Hayır. Oyun tamamen çevrimdışı oynanır.</p></details>
+      <details><summary>En yüksek skorlarım nerede saklanıyor?</summary>
+        <p>Skorların yalnızca cihazında saklanır, hiçbir yere yüklenmez.</p></details>
+      <details><summary>Uygulamayı sildim. Skorlarımı geri alabilir miyim?</summary>
+        <p>Skorlar cihazda saklandığı için uygulamayı silmek onları da siler ve geri yüklenemez.</p></details>
+      <details><summary>Dokunuşlar gecikiyor ya da oyun takılıyor.</summary>
+        <p>Arka planda çalışan uygulamaları kapat, Düşük Güç Modu'nu (iOS) veya Pil Tasarrufu'nu (Android) kapat ve Circle Cycle ile işletim sisteminin güncel sürümlerini kullandığından emin ol. Sorun devam ederse cihaz modelinle birlikte bize e-posta gönder.</p></details>
+      <details><summary>Oyunu nasıl sıfırlarım?</summary>
+        <p>Uygulamayı silip yeniden yüklemek tüm ilerlemeyi ve skorları sıfırlar.</p></details>
+    </div>
+  </section>
+
+  <!-- ================= PRIVACY ================= -->
+  <section class="card" id="privacy">
+    <h2><span class="en">PRIVACY POLICY</span><span class="tr">GİZLİLİK POLİTİKASI</span></h2>
+
+    <div class="en">
+      <p class="meta">Effective date: October 21, 2026</p>
+      <p>This Privacy Policy explains how the Circle Cycle mobile app for iOS and Android ("the App") handles information. In short: <strong>the App does not collect, store on any server, or share any personal data.</strong></p>
+
+      <h3>Information we collect</h3>
+      <p>We do not collect any personal information. The App does not require an account, and it does not ask for your name, email address, location, contacts, photos or any other personal data.</p>
+
+      <h3>Data stored on your device</h3>
+      <p>The App saves your game progress and top scores locally on your device so you can see them the next time you play. This data never leaves your device and is not accessible to us. Deleting the App removes this data.</p>
+
+      <h3>Analytics, advertising and tracking</h3>
+      <p>The App does not include third-party analytics, advertising or tracking SDKs, and it does not track you across apps or websites owned by other companies.</p>
+
+      <h3>Crash reports</h3>
+      <p>Depending on your device settings, the platform provider may share anonymous crash reports and usage statistics with us: Apple on iOS (if you have opted in to share analytics with app developers) and Google on Android (through Google Play's diagnostics). This information does not identify you and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> respectively.</p>
+
+      <h3>Children's privacy</h3>
+      <p>The App is suitable for all ages. Because we do not collect any personal information, we do not knowingly collect data from children under 13 (or the equivalent minimum age in your country).</p>
+
+      <h3>Your rights</h3>
+      <p>Since we do not hold any personal data about you, there is nothing for us to access, correct or delete. You can remove all locally stored game data at any time by deleting the App.</p>
+
+      <h3>Changes to this policy</h3>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+
+      <h3>Contact</h3>
+      <p>If you have any questions about this Privacy Policy, contact us at <a data-mail data-show href="#"></a>.</p>
+    </div>
+
+    <div class="tr">
+      <p class="meta">Yürürlük tarihi: 21 Ekim 2026</p>
+      <p>Bu Gizlilik Politikası, Circle Cycle iOS ve Android uygulamasının ("Uygulama") bilgileri nasıl ele aldığını açıklar. Kısaca: <strong>Uygulama hiçbir kişisel veri toplamaz, herhangi bir sunucuda saklamaz ve kimseyle paylaşmaz.</strong></p>
+
+      <h3>Topladığımız bilgiler</h3>
+      <p>Hiçbir kişisel bilgi toplamıyoruz. Uygulama hesap gerektirmez; adın, e-posta adresin, konumun, kişilerin, fotoğrafların veya başka herhangi bir kişisel verin istenmez.</p>
+
+      <h3>Cihazında saklanan veriler</h3>
+      <p>Uygulama, bir sonraki oyununda görebilmen için oyun ilerlemeni ve en yüksek skorlarını yalnızca cihazında saklar. Bu veriler cihazından çıkmaz ve bizim erişimimizde değildir. Uygulamayı silmek bu verileri de siler.</p>
+
+      <h3>Analiz, reklam ve takip</h3>
+      <p>Uygulama üçüncü taraf analiz, reklam veya takip SDK'ları içermez ve seni diğer şirketlere ait uygulama ya da web sitelerinde takip etmez.</p>
+
+      <h3>Çökme raporları</h3>
+      <p>Cihaz ayarlarına bağlı olarak platform sağlayıcısı bize anonim çökme raporları ve kullanım istatistikleri iletebilir: iOS'ta Apple (analiz verilerini uygulama geliştiricileriyle paylaşmayı seçtiysen), Android'de ise Google (Google Play tanılama verileri aracılığıyla). Bu bilgiler seni tanımlamaz ve sırasıyla <a href="https://www.apple.com/tr/legal/privacy/" target="_blank" rel="noopener">Apple'ın</a> ve <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google'ın</a> gizlilik politikalarına tabidir.</p>
+
+      <h3>Çocukların gizliliği</h3>
+      <p>Uygulama her yaşa uygundur. Hiçbir kişisel bilgi toplamadığımız için 13 yaşından (veya ülkendeki eşdeğer yaş sınırından) küçük çocuklardan bilerek veri toplamayız.</p>
+
+      <h3>Hakların</h3>
+      <p>Senin hakkında hiçbir kişisel veri tutmadığımız için erişilecek, düzeltilecek veya silinecek bir veri yoktur. Cihazında saklanan tüm oyun verilerini uygulamayı silerek istediğin zaman kaldırabilirsin.</p>
+
+      <h3>Politika değişiklikleri</h3>
+      <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada, güncellenmiş yürürlük tarihiyle yayımlanır.</p>
+
+      <h3>İletişim</h3>
+      <p>Bu Gizlilik Politikası hakkında soruların için bize <a data-mail data-show href="#"></a> adresinden ulaşabilirsin.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="px">INSERT COIN TO CONTINUE</div>
+    <p>© 2026 Circle Cycle</p>
+  </footer>
+</div>
+
+<script>
+  /* ====== CONFIG: set your support e-mail here ====== */
+  const SUPPORT_EMAIL = "vagonlabs@gmail.com";
+
+  document.querySelectorAll("[data-mail]").forEach(a => {
+    a.href = "mailto:" + SUPPORT_EMAIL + "?subject=" + encodeURIComponent("Circle Cycle Support");
+    if (a.hasAttribute("data-show")) a.textContent = SUPPORT_EMAIL;
+  });
+
+  // Language: ?lang=tr / ?lang=en in the URL, otherwise browser language
+  const params = new URLSearchParams(location.search);
+  let lang = params.get("lang") || ((navigator.language || "en").toLowerCase().startsWith("tr") ? "tr" : "en");
+  function setLang(l) {
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.set === l));
+  }
+  document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.set)));
+  setLang(lang === "tr" ? "tr" : "en");
+</script>
+</body>
+</html>
