@@ -9,8 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  /* ====== EDIT THESE ====== */
-  /* Contact e-mail is set in the CONFIG block at the bottom of the file. */
 
   :root {
     --bg: #0c0c20;
@@ -92,7 +90,7 @@
   p, li { color: var(--text); }
   ul { padding-left: 20px; }
   li { margin: 4px 0; }
-  a { color: var(--cyan); }
+  a { color: var(--cyan); overflow-wrap: anywhere; }
   .contact {
     display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
     background: rgba(0,0,0,.25); border: 2px dashed var(--line); padding: 18px 20px; margin: 18px 0 6px;
@@ -150,8 +148,8 @@
     <div class="en">
       <p>Need help, found a bug, or have an idea for Circle Cycle? We'd love to hear from you.</p>
       <div class="contact">
-        <div><strong>Email us</strong><span>We usually reply within 2 business days.</span></div>
-        <a class="btn" data-mail href="#">CONTACT</a>
+        <div><strong>Email: <a href="mailto:vagonlabs@gmail.com?subject=Circle%20Cycle%20Support">vagonlabs@gmail.com</a></strong><span>We usually reply within 2 business days.</span></div>
+        <a class="btn" href="mailto:vagonlabs@gmail.com?subject=Circle%20Cycle%20Support">CONTACT</a>
       </div>
       <p class="meta">When reporting a problem, please include your device model, operating system version (iOS or Android) and the app version (shown in the App Store or Google Play).</p>
 
@@ -160,11 +158,13 @@
 
       <h3>Frequently asked questions</h3>
       <details><summary>Does Circle Cycle need an internet connection?</summary>
-        <p>No. The game plays fully offline.</p></details>
+        <p>No, you can play offline. An internet connection is only needed to show ads, including the optional rewarded ads.</p></details>
       <details><summary>Where are my top scores saved?</summary>
-        <p>Your top scores are stored only on your device. They are not uploaded anywhere.</p></details>
+        <p>Your top scores and level data are stored only on your device. We do not upload them anywhere.</p></details>
       <details><summary>I deleted the app. Can I get my scores back?</summary>
         <p>Because scores are saved locally, deleting the app also deletes them and they can't be restored.</p></details>
+      <details><summary>How can I limit personalized ads?</summary>
+        <p>On iOS, choose "Ask App Not to Track" when prompted, or go to Settings &gt; Privacy &amp; Security &gt; Tracking. On Android, go to Settings &gt; Privacy (or Google) &gt; Ads and delete or reset your advertising ID. If you are in a region where we ask for ad consent, you can change your choice from the privacy options in the app.</p></details>
       <details><summary>Taps feel delayed or the game stutters.</summary>
         <p>Close other apps running in the background, turn off Low Power Mode (iOS) or Battery Saver (Android), and make sure you have the latest version of Circle Cycle and your operating system installed. If the issue continues, email us with your device model.</p></details>
       <details><summary>How do I reset the game?</summary>
@@ -174,8 +174,8 @@
     <div class="tr">
       <p>Yardıma mı ihtiyacın var, bir hata mı buldun ya da Circle Cycle için bir fikrin mi var? Bize yaz.</p>
       <div class="contact">
-        <div><strong>E-posta gönder</strong><span>Genellikle 2 iş günü içinde yanıt veriyoruz.</span></div>
-        <a class="btn" data-mail href="#">İLETİŞİM</a>
+        <div><strong>E-posta: <a href="mailto:vagonlabs@gmail.com?subject=Circle%20Cycle%20Destek">vagonlabs@gmail.com</a></strong><span>Genellikle 2 iş günü içinde yanıt veriyoruz.</span></div>
+        <a class="btn" href="mailto:vagonlabs@gmail.com?subject=Circle%20Cycle%20Destek">İLETİŞİM</a>
       </div>
       <p class="meta">Bir sorun bildirirken lütfen cihaz modelini, işletim sistemi sürümünü (iOS veya Android) ve uygulama sürümünü (App Store'da veya Google Play'de görünür) ekle.</p>
 
@@ -184,11 +184,13 @@
 
       <h3>Sık sorulan sorular</h3>
       <details><summary>Circle Cycle internet bağlantısı gerektiriyor mu?</summary>
-        <p>Hayır. Oyun tamamen çevrimdışı oynanır.</p></details>
+        <p>Hayır, çevrimdışı oynayabilirsin. İnternet bağlantısı yalnızca reklamların (isteğe bağlı ödüllü reklamlar dahil) gösterilmesi için gerekir.</p></details>
       <details><summary>En yüksek skorlarım nerede saklanıyor?</summary>
-        <p>Skorların yalnızca cihazında saklanır, hiçbir yere yüklenmez.</p></details>
+        <p>Skorların ve seviye verilerin yalnızca cihazında saklanır. Bunları hiçbir yere yüklemiyoruz.</p></details>
       <details><summary>Uygulamayı sildim. Skorlarımı geri alabilir miyim?</summary>
         <p>Skorlar cihazda saklandığı için uygulamayı silmek onları da siler ve geri yüklenemez.</p></details>
+      <details><summary>Kişiselleştirilmiş reklamları nasıl sınırlarım?</summary>
+        <p>iOS'ta sorulduğunda "Uygulamadan İzlememesini İste"yi seç veya Ayarlar &gt; Gizlilik ve Güvenlik &gt; İzleme bölümüne git. Android'de Ayarlar &gt; Gizlilik (veya Google) &gt; Reklamlar bölümünden reklam kimliğini sil ya da sıfırla. Reklam onayı istediğimiz bir bölgedeysen seçimini uygulamadaki gizlilik seçeneklerinden değiştirebilirsin.</p></details>
       <details><summary>Dokunuşlar gecikiyor ya da oyun takılıyor.</summary>
         <p>Arka planda çalışan uygulamaları kapat, Düşük Güç Modu'nu (iOS) veya Pil Tasarrufu'nu (Android) kapat ve Circle Cycle ile işletim sisteminin güncel sürümlerini kullandığından emin ol. Sorun devam ederse cihaz modelinle birlikte bize e-posta gönder.</p></details>
       <details><summary>Oyunu nasıl sıfırlarım?</summary>
@@ -202,78 +204,106 @@
 
     <div class="en">
       <p class="meta">Effective date: October 21, 2026</p>
-      <p>This Privacy Policy explains how the Circle Cycle mobile app for iOS and Android ("the App") handles information. In short: <strong>the App does not collect, store on any server, or share any personal data.</strong></p>
+      <p>This Privacy Policy explains how the Circle Cycle mobile app for iOS and Android ("the App"), developed by Vagon Labs ("we", "us"), handles information.</p>
+      <p>In short: <strong>we do not collect any personal data ourselves and we do not run any servers.</strong> The App shows ads through Google AdMob, and Google collects certain device data to serve those ads, as described below.</p>
 
       <h3>Information we collect</h3>
-      <p>We do not collect any personal information. The App does not require an account, and it does not ask for your name, email address, location, contacts, photos or any other personal data.</p>
+      <p>We do not collect, receive or store any personal information. The App does not require an account and does not ask for your name, email address, contacts, photos or precise location.</p>
 
       <h3>Data stored on your device</h3>
-      <p>The App saves your game progress and top scores locally on your device so you can see them the next time you play. This data never leaves your device and is not accessible to us. Deleting the App removes this data.</p>
+      <p>The App saves your top scores and level data locally on your device using on-device storage. This data never leaves your device and is not accessible to us. Deleting the App removes this data.</p>
+      <p>The level editor can copy level data to your clipboard when you choose to. The App does not read your clipboard.</p>
 
-      <h3>Analytics, advertising and tracking</h3>
-      <p>The App does not include third-party analytics, advertising or tracking SDKs, and it does not track you across apps or websites owned by other companies.</p>
+      <h3>Advertising (Google AdMob)</h3>
+      <p>The App displays banner, interstitial and optional rewarded ads provided by Google AdMob. To show and measure ads and to prevent fraud, Google's Mobile Ads SDK may automatically collect and share with Google:</p>
+      <ul>
+        <li>Device identifiers, such as the advertising ID (Android Advertising ID or Apple's IDFA, if you allow tracking)</li>
+        <li>Approximate location derived from your IP address</li>
+        <li>Device and app information, such as device model, operating system and app version</li>
+        <li>Interactions with ads, such as ad views and taps</li>
+        <li>Diagnostic information, such as crash logs and performance data</li>
+      </ul>
+      <p>This data is collected and processed by Google, not by us, and is encrypted in transit. Google's use of this data is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>. You can learn more at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use its services</a>.</p>
 
-      <h3>Crash reports</h3>
-      <p>Depending on your device settings, the platform provider may share anonymous crash reports and usage statistics with us: Apple on iOS (if you have opted in to share analytics with app developers) and Google on Android (through Google Play's diagnostics). This information does not identify you and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> respectively.</p>
+      <h3>Your choices about ads</h3>
+      <ul>
+        <li><strong>iOS:</strong> The App asks for your permission before your advertising identifier (IDFA) can be used for tracking. If you choose "Ask App Not to Track", you will still see ads, but they will be less personalized. You can change this anytime in Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+        <li><strong>Android:</strong> You can delete or reset your advertising ID in your device settings (Settings &gt; Privacy or Google &gt; Ads).</li>
+        <li><strong>EEA, UK and Switzerland:</strong> The App uses Google's consent tool to ask for your consent before personalized ads are shown. You can change your choice at any time from the privacy options in the App.</li>
+        <li>You can also manage ad personalization at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</li>
+      </ul>
+
+      <h3>Crash reports from the platform</h3>
+      <p>Depending on your device settings, Apple (iOS) or Google (Android) may share anonymous crash reports and usage statistics with us. This information does not identify you and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 
       <h3>Children's privacy</h3>
-      <p>The App is suitable for all ages. Because we do not collect any personal information, we do not knowingly collect data from children under 13 (or the equivalent minimum age in your country).</p>
+      <p>The App is not directed at children under 13 (or the equivalent minimum age in your country). We do not knowingly collect personal information from children. If you believe a child has provided personal information through the App, please contact us.</p>
 
       <h3>Your rights</h3>
-      <p>Since we do not hold any personal data about you, there is nothing for us to access, correct or delete. You can remove all locally stored game data at any time by deleting the App.</p>
+      <p>Since we do not hold any personal data about you, there is nothing for us to access, correct or delete. You can remove all locally stored game data at any time by deleting the App. For data collected by Google for advertising, you can use the choices above or contact Google directly.</p>
 
       <h3>Changes to this policy</h3>
       <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
 
       <h3>Contact</h3>
-      <p>If you have any questions about this Privacy Policy, contact us at <a data-mail data-show href="#"></a>.</p>
+      <p>If you have any questions about this Privacy Policy, contact us at <a href="mailto:vagonlabs@gmail.com?subject=Circle%20Cycle%20Privacy">vagonlabs@gmail.com</a>.</p>
     </div>
 
     <div class="tr">
       <p class="meta">Yürürlük tarihi: 21 Ekim 2026</p>
-      <p>Bu Gizlilik Politikası, Circle Cycle iOS ve Android uygulamasının ("Uygulama") bilgileri nasıl ele aldığını açıklar. Kısaca: <strong>Uygulama hiçbir kişisel veri toplamaz, herhangi bir sunucuda saklamaz ve kimseyle paylaşmaz.</strong></p>
+      <p>Bu Gizlilik Politikası, Vagon Labs ("biz") tarafından geliştirilen Circle Cycle iOS ve Android uygulamasının ("Uygulama") bilgileri nasıl ele aldığını açıklar.</p>
+      <p>Kısaca: <strong>Kişisel verileri kendimiz toplamıyoruz ve herhangi bir sunucu işletmiyoruz.</strong> Uygulama reklamları Google AdMob üzerinden gösterir ve Google, bu reklamları sunmak için aşağıda açıklanan bazı cihaz verilerini toplar.</p>
 
       <h3>Topladığımız bilgiler</h3>
-      <p>Hiçbir kişisel bilgi toplamıyoruz. Uygulama hesap gerektirmez; adın, e-posta adresin, konumun, kişilerin, fotoğrafların veya başka herhangi bir kişisel verin istenmez.</p>
+      <p>Hiçbir kişisel bilgiyi toplamıyor, almıyor veya saklamıyoruz. Uygulama hesap gerektirmez; adın, e-posta adresin, kişilerin, fotoğrafların veya kesin konumun istenmez.</p>
 
       <h3>Cihazında saklanan veriler</h3>
-      <p>Uygulama, bir sonraki oyununda görebilmen için oyun ilerlemeni ve en yüksek skorlarını yalnızca cihazında saklar. Bu veriler cihazından çıkmaz ve bizim erişimimizde değildir. Uygulamayı silmek bu verileri de siler.</p>
+      <p>Uygulama, en yüksek skorlarını ve seviye verilerini yalnızca cihazının yerel depolamasında saklar. Bu veriler cihazından çıkmaz ve bizim erişimimizde değildir. Uygulamayı silmek bu verileri de siler.</p>
+      <p>Seviye editörü, sen istediğinde seviye verilerini panoya kopyalayabilir. Uygulama panonu okumaz.</p>
 
-      <h3>Analiz, reklam ve takip</h3>
-      <p>Uygulama üçüncü taraf analiz, reklam veya takip SDK'ları içermez ve seni diğer şirketlere ait uygulama ya da web sitelerinde takip etmez.</p>
+      <h3>Reklamlar (Google AdMob)</h3>
+      <p>Uygulama, Google AdMob tarafından sağlanan banner, geçiş ve isteğe bağlı ödüllü reklamlar gösterir. Reklamları göstermek ve ölçmek ile dolandırıcılığı önlemek amacıyla Google'ın Mobile Ads SDK'sı aşağıdaki verileri otomatik olarak toplayıp Google ile paylaşabilir:</p>
+      <ul>
+        <li>Reklam kimliği gibi cihaz tanımlayıcıları (Android Reklam Kimliği veya izin verirsen Apple'ın IDFA'sı)</li>
+        <li>IP adresinden çıkarılan yaklaşık konum</li>
+        <li>Cihaz modeli, işletim sistemi ve uygulama sürümü gibi cihaz ve uygulama bilgileri</li>
+        <li>Reklam görüntüleme ve tıklama gibi reklam etkileşimleri</li>
+        <li>Çökme kayıtları ve performans verileri gibi tanılama bilgileri</li>
+      </ul>
+      <p>Bu veriler bizim tarafımızdan değil, Google tarafından toplanır ve işlenir; aktarım sırasında şifrelenir. Google'ın bu verileri kullanımı <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google Gizlilik Politikası</a>'na tabidir. Ayrıntılar için: <a href="https://policies.google.com/technologies/partner-sites?hl=tr" target="_blank" rel="noopener">Google, hizmetlerini kullanan site veya uygulamalardaki bilgileri nasıl kullanır</a>.</p>
 
-      <h3>Çökme raporları</h3>
-      <p>Cihaz ayarlarına bağlı olarak platform sağlayıcısı bize anonim çökme raporları ve kullanım istatistikleri iletebilir: iOS'ta Apple (analiz verilerini uygulama geliştiricileriyle paylaşmayı seçtiysen), Android'de ise Google (Google Play tanılama verileri aracılığıyla). Bu bilgiler seni tanımlamaz ve sırasıyla <a href="https://www.apple.com/tr/legal/privacy/" target="_blank" rel="noopener">Apple'ın</a> ve <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google'ın</a> gizlilik politikalarına tabidir.</p>
+      <h3>Reklamlarla ilgili seçimlerin</h3>
+      <ul>
+        <li><strong>iOS:</strong> Uygulama, reklam kimliğinin (IDFA) izleme amacıyla kullanılmasından önce senden izin ister. "Uygulamadan İzlememesini İste"yi seçersen reklam görmeye devam edersin, ancak reklamlar daha az kişiselleştirilmiş olur. Bunu istediğin zaman Ayarlar &gt; Gizlilik ve Güvenlik &gt; İzleme bölümünden değiştirebilirsin.</li>
+        <li><strong>Android:</strong> Reklam kimliğini cihaz ayarlarından (Ayarlar &gt; Gizlilik veya Google &gt; Reklamlar) silebilir ya da sıfırlayabilirsin.</li>
+        <li><strong>AEA, Birleşik Krallık ve İsviçre:</strong> Uygulama, kişiselleştirilmiş reklamlar gösterilmeden önce Google'ın onay aracıyla izin ister. Seçimini istediğin zaman uygulamadaki gizlilik seçeneklerinden değiştirebilirsin.</li>
+        <li>Reklam kişiselleştirmeyi <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a> adresinden de yönetebilirsin.</li>
+      </ul>
+
+      <h3>Platform çökme raporları</h3>
+      <p>Cihaz ayarlarına bağlı olarak Apple (iOS) veya Google (Android) bize anonim çökme raporları ve kullanım istatistikleri iletebilir. Bu bilgiler seni tanımlamaz ve <a href="https://www.apple.com/tr/legal/privacy/" target="_blank" rel="noopener">Apple'ın</a> ve <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google'ın</a> gizlilik politikalarına tabidir.</p>
 
       <h3>Çocukların gizliliği</h3>
-      <p>Uygulama her yaşa uygundur. Hiçbir kişisel bilgi toplamadığımız için 13 yaşından (veya ülkendeki eşdeğer yaş sınırından) küçük çocuklardan bilerek veri toplamayız.</p>
+      <p>Uygulama 13 yaşından (veya ülkendeki eşdeğer yaş sınırından) küçük çocuklara yönelik değildir. Çocuklardan bilerek kişisel bilgi toplamayız. Bir çocuğun Uygulama aracılığıyla kişisel bilgi paylaştığını düşünüyorsan lütfen bize ulaş.</p>
 
       <h3>Hakların</h3>
-      <p>Senin hakkında hiçbir kişisel veri tutmadığımız için erişilecek, düzeltilecek veya silinecek bir veri yoktur. Cihazında saklanan tüm oyun verilerini uygulamayı silerek istediğin zaman kaldırabilirsin.</p>
+      <p>Senin hakkında hiçbir kişisel veri tutmadığımız için erişilecek, düzeltilecek veya silinecek bir veri yoktur. Cihazında saklanan tüm oyun verilerini uygulamayı silerek istediğin zaman kaldırabilirsin. Google'ın reklam amacıyla topladığı veriler için yukarıdaki seçenekleri kullanabilir veya doğrudan Google ile iletişime geçebilirsin.</p>
 
       <h3>Politika değişiklikleri</h3>
       <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada, güncellenmiş yürürlük tarihiyle yayımlanır.</p>
 
       <h3>İletişim</h3>
-      <p>Bu Gizlilik Politikası hakkında soruların için bize <a data-mail data-show href="#"></a> adresinden ulaşabilirsin.</p>
+      <p>Bu Gizlilik Politikası hakkında soruların için bize <a href="mailto:vagonlabs@gmail.com?subject=Circle%20Cycle%20Gizlilik">vagonlabs@gmail.com</a> adresinden ulaşabilirsin.</p>
     </div>
   </section>
 
   <footer>
     <div class="px">INSERT COIN TO CONTINUE</div>
-    <p>© 2026 Circle Cycle</p>
+    <p>© 2026 Vagon Labs · Circle Cycle</p>
   </footer>
 </div>
 
 <script>
-  /* ====== CONFIG: set your support e-mail here ====== */
-  const SUPPORT_EMAIL = "vagonlabs@gmail.com";
-
-  document.querySelectorAll("[data-mail]").forEach(a => {
-    a.href = "mailto:" + SUPPORT_EMAIL + "?subject=" + encodeURIComponent("Circle Cycle Support");
-    if (a.hasAttribute("data-show")) a.textContent = SUPPORT_EMAIL;
-  });
-
   // Language: ?lang=tr / ?lang=en in the URL, otherwise browser language
   const params = new URLSearchParams(location.search);
   let lang = params.get("lang") || ((navigator.language || "en").toLowerCase().startsWith("tr") ? "tr" : "en");
